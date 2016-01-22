@@ -9,7 +9,7 @@ void time::timer(UINT n)
 {
 	if(MCIWndGetPosition(hMCI) >=MCIWndGetLength(hMCI)) 
 		MCIWndPlay(hMCI);
-	if(n==1)//我方
+	if(n==1)//鎴戞柟
 	{
 		if(turntag!=1)return;
 		flag++;	if(flag==3)flag=0;
@@ -35,12 +35,12 @@ void time::timer(UINT n)
 			{cur_else();}
 		dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	}
-	if(n==2)//敌方
+	if(n==2)//鏁屾柟
 	{
 		if(turntag!=2)return;
 		AItime();
 	}
-	if(n==3)//光标回归
+	if(n==3)//鍏夋爣鍥炲綊
 	{
 		if(turntag!=3)return;	
 		cur_backbit();

@@ -8,17 +8,17 @@ void key::keydown()
 {
 	if(turntag==1 && !cur.heromoving)
 	{
-		if( keyChar== 0x6B || keyChar== 0x4B ) //°´¼üK ¡°Ñ¡Ôñ¡±
+		if( keyChar== 0x6B || keyChar== 0x4B ) //æŒ‰é”®K â€œé€‰æ‹©â€
 			key_K();
-		if( keyChar== 0x6A || keyChar== 0x4A ) //°´¼üJ ¡°È¡Ïû¡±
+		if( keyChar== 0x6A || keyChar== 0x4A ) //æŒ‰é”®J â€œå–æ¶ˆâ€
 			key_J();
-		if( keyChar== 0x77 || keyChar== 0x57) // W ÉÏ
+		if( keyChar== 0x77 || keyChar== 0x57) // W ä¸Š
 			key_W();
-		if( keyChar== 0x73 || keyChar== 0x53 ) //s ÏÂ
+		if( keyChar== 0x73 || keyChar== 0x53 ) //s ä¸‹
 			key_S();
-		if( keyChar== 0x64 || keyChar== 0x44 )  //D ÓÒ
+		if( keyChar== 0x64 || keyChar== 0x44 )  //D å³
 			key_D();
-		if( keyChar== 0x61 || keyChar== 0x41 ) //×ó A
+		if( keyChar== 0x61 || keyChar== 0x41 ) //å·¦ A
 			key_A();
 	}
 }

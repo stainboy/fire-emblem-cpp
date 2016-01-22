@@ -3,16 +3,16 @@
 typedef struct link1
 {
 	short menu;	//0~4
-	short i;	//¼ÆÊı
-	link1 *p;	//Ç°½áµã
-	link1 *n;	//ºó½áµã
+	short i;	//è®¡æ•°
+	link1 *p;	//å‰ç»“ç‚¹
+	link1 *n;	//åç»“ç‚¹
 }menutype;
 
 typedef struct link2
 {
-	short x,y;	//×ø±ê
-	link2 *p;	//Ç°½áµã
-	link2 *n;	//ºó½áµã
+	short x,y;	//åæ ‡
+	link2 *p;	//å‰ç»“ç‚¹
+	link2 *n;	//åç»“ç‚¹
 }manpoint;
 
 class menu : public find	

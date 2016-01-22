@@ -209,7 +209,7 @@ void monster::AImoving()
 	{
 		q->selected=false;
 		q->action=false;
-		AfxMessageBox("´ý»ú");
+		AfxMessageBox("å¾…æœº");
 		q=q->next;
 		if(q=0)endmonturn();
 		return;	
@@ -234,7 +234,7 @@ void monster::AImoving()
 		{
 			q->selected=false;
 			q->action=false;
-			AfxMessageBox("´ý»ú");
+			AfxMessageBox("å¾…æœº");
 			q=q->next;
 			if(q=0)endmonturn();
 		}

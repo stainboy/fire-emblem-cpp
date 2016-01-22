@@ -21,9 +21,9 @@ class monster : public menu
  virtual~monster();
 
 public:
-	int turntag;			//¿ØÖÆµÚ¼¸¸ö¼ÆÊ±Æ÷µÄtag(1-ÈË£¬2-AI£¬3-¹â±ê)
-	int turn1;				//Ö®Ç°µÄturn
-	fpoint tar_p,ori_p;		//Ä¿±êµã£¬Ô­Ê¼µã
+	int turntag;			//æ§åˆ¶ç¬¬å‡ ä¸ªè®¡æ—¶å™¨çš„tag(1-äººï¼Œ2-AIï¼Œ3-å…‰æ ‡)
+	int turn1;				//ä¹‹å‰çš„turn
+	fpoint tar_p,ori_p;		//ç›®æ ‡ç‚¹ï¼ŒåŸå§‹ç‚¹
 	monstertime mtime;
 
 	void initAI();

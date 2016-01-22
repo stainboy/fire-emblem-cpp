@@ -130,7 +130,7 @@ void game::TransparentBlt2( HDC hdc0,
 	DeleteObject(hBMP);
 	DeleteObject(mBMP);
 }
-void game::del(HERO **head,HERO *p)//Ö¸ÏòheadµÄÖ¸Õë,ÓÃÓÚ¸Ä±äheadµÄµØÖ·
+void game::del(HERO **head,HERO *p)//æŒ‡å‘headçš„æŒ‡é’ˆ,ç”¨äºæ”¹å˜headçš„åœ°å€
 {
 	HERO *s;
 	if(*head==p)
@@ -152,10 +152,10 @@ CString game::JOB(int i)
 {
 	switch(i)
 	{
-		case 0:return "´åÈË";break;
-		case 1:return "º£µÁ";break;
-		case 2:return "Ç¹±ø";break;
-		case 3:return "Õ½Ê¿";break;
+		case 0:return "æ‘äºº";break;
+		case 1:return "æµ·ç›—";break;
+		case 2:return "æªå…µ";break;
+		case 3:return "æˆ˜å£«";break;
 		default : return "";
 	}
 }

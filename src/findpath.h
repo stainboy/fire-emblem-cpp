@@ -2,18 +2,18 @@
 
 typedef struct link
 {
-	short x,y;		//×ø±ê
-	short J;		//Ö°Òµ
-	short R;		//Ê£Óà²½Êı
-	short D;		//·½Ïò 0×ó 1ÏÂ 2ÓÒ 3ÉÏ
-	link *c[4];		//3¸ö¶ù×Ó
-	link *f;		//¸¸Ç×
+	short x,y;		//åæ ‡
+	short J;		//èŒä¸š
+	short R;		//å‰©ä½™æ­¥æ•°
+	short D;		//æ–¹å‘ 0å·¦ 1ä¸‹ 2å³ 3ä¸Š
+	link *c[4];		//3ä¸ªå„¿å­
+	link *f;		//çˆ¶äº²
 }tree;
 
 typedef struct
 {
-	short x,y;		//×ø±ê
-	short D;		//·½Ïò
+	short x,y;		//åæ ‡
+	short D;		//æ–¹å‘
 }movept;
 
 class find : public gamemap	
@@ -21,12 +21,12 @@ class find : public gamemap
  virtual~find();
 
 public:
-	tree *t;		//Ñ°Â·ÓÃµÄÊ÷
-	tree *s;		//Ò»¿ÃÊ÷£¬·µ»Ø×î¶ÌÂ·
-	movept pt[10];	//±£´æ×î¶ÌÂ·µÄÊı×é
-	short moves;	//±£´æÒ»¹²×ßÁË¼¸¸ñ
-	short mi,mj;	//×ßÂ·Ê±ĞèÒªÓÃµ½µÄ±äÁ¿
-	float detx,dety;//×ßÂ·ÓÃÁÙÊ±±äÁ¿
+	tree *t;		//å¯»è·¯ç”¨çš„æ ‘
+	tree *s;		//ä¸€æ£µæ ‘ï¼Œè¿”å›æœ€çŸ­è·¯
+	movept pt[10];	//ä¿å­˜æœ€çŸ­è·¯çš„æ•°ç»„
+	short moves;	//ä¿å­˜ä¸€å…±èµ°äº†å‡ æ ¼
+	short mi,mj;	//èµ°è·¯æ—¶éœ€è¦ç”¨åˆ°çš„å˜é‡
+	float detx,dety;//èµ°è·¯ç”¨ä¸´æ—¶å˜é‡
 	int Maxnode;
 	
 	void initfind();

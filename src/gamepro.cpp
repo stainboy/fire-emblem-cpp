@@ -62,7 +62,7 @@ void gamemap::herostatus()
 	int t=1;
 	SetBkMode(*mdc,TRANSPARENT);	
 	SetTextColor(*mdc,RGB(255,255,255));
-	CString cc="ÓÐÎïÆ·",cc1="Ã»ÎïÆ·";
+	CString cc="æœ‰ç‰©å“",cc1="æ²¡ç‰©å“";
 	mdc1->SelectObject(turn);
 	if(cur.x<=7){t=9;}
 			mdc->BitBlt(t*32,32,6*32,32,mdc1,0,0,SRCCOPY);
@@ -83,7 +83,7 @@ void gamemap::herostatus()
 		mdc->TextOut(t*32+32,3*32-16,JOB(p->job));
 		sprintf(chp,"Lev:%d   Exp:%d",p->P.level,p->P.exp);
 		mdc->TextOut(t*32+32,4*32-16,chp);
-		cc="ÎäÆ÷:½£";
+		cc="æ­¦å™¨:å‰‘";
 		mdc->TextOut(t*32+32,5*32-16,cc);
 		sprintf(chp,"HP:%d/%d",p->P.hp,p->P.hpmax);
 		mdc->TextOut(t*32+32,6*32-16,chp);
@@ -99,7 +99,7 @@ void gamemap::herostatus()
 		mdc->TextOut(t*32+32,3*32-16,JOB(q->job));
 		sprintf(chp,"Lev:%d   Exp:%d",q->P.level,q->P.exp);
 		mdc->TextOut(t*32+32,4*32-16,chp);
-		cc="ÎäÆ÷:½£";
+		cc="æ­¦å™¨:å‰‘";
 		mdc->TextOut(t*32+32,5*32-16,cc);
 		sprintf(chp,"HP:%d/%d",q->P.hp,q->P.hpmax);
 		mdc->TextOut(t*32+32,6*32-16,chp);
@@ -163,27 +163,27 @@ if(p)
 		mdc->TextOut(t*32+32,3*32-16,JOB(p->job));
 		sprintf(chp,"Lev:%d   Exp:%d",p->P.level,p->P.exp);
 		mdc->TextOut(t*32+32,4*32-16,chp);
-		cc="ÎäÆ÷:½£";
+		cc="æ­¦å™¨:å‰‘";
 		mdc->TextOut(t*32+32,5*32-16,cc);
 		sprintf(chp,"HP:%d/%d",p->P.hp,p->P.hpmax);
 		mdc->TextOut(t*32+32,6*32-16,chp);
-		cc="²»ÄÜ";
+		cc="ä¸èƒ½";
 		mdc->TextOut(t*32+32,9*32-8,cc);
-		cc="Ï°µÃÄ§·¨";
+		cc="ä¹ å¾—é­”æ³•";
 		mdc->TextOut(t*32+32,10*32-8,cc);
-		sprintf(chp,"Á¦Á¿:       %d",p->P.str);
+		sprintf(chp,"åŠ›é‡:       %d",p->P.str);
 		mdc->TextOut((10-t-o)*32+40,6*32,chp);
-		sprintf(chp,"¼¼Êõ:       %d",p->P.dex);
+		sprintf(chp,"æŠ€æœ¯:       %d",p->P.dex);
 		mdc->TextOut((10-t-o)*32+40,7*32,chp);
-		sprintf(chp,"ËÙ¶È:       %d",p->P.speed);
+		sprintf(chp,"é€Ÿåº¦:       %d",p->P.speed);
 		mdc->TextOut((10-t-o)*32+40,8*32,chp);
-		sprintf(chp,"ÔËÆø:       %d",p->P.luck);
+		sprintf(chp,"è¿æ°”:       %d",p->P.luck);
 		mdc->TextOut((10-t-o)*32+40,9*32,chp);
-		sprintf(chp,"·ÀÓù:       %d",p->P.def);
+		sprintf(chp,"é˜²å¾¡:       %d",p->P.def);
 		mdc->TextOut((10-t-o)*32+40,10*32,chp);
-		sprintf(chp,"Ä§·À:       %d",p->P.mdef);
+		sprintf(chp,"é­”é˜²:       %d",p->P.mdef);
 		mdc->TextOut((10-t-o)*32+40,11*32,chp);
-		sprintf(chp,"ÒÆ¶¯:       %d",p->movement);
+		sprintf(chp,"ç§»åŠ¨:       %d",p->movement);
 		mdc->TextOut((10-t-o)*32+40,12*32,chp);
 		sprintf(chp," EXP:       %d",p->P.exp);
 		mdc->TextOut((10-t-o)*32+40,13*32,chp);
@@ -195,27 +195,27 @@ if(p)
 		mdc->TextOut(t*32+32,3*32-16,JOB(q->job));
 		sprintf(chp,"Lev:%d   Exp:%d",q->P.level,q->P.exp);
 		mdc->TextOut(t*32+32,4*32-16,chp);
-		cc="ÎäÆ÷:½£";
+		cc="æ­¦å™¨:å‰‘";
 		mdc->TextOut(t*32+32,5*32-16,cc);
 		sprintf(chp,"HP:%d/%d",q->P.hp,q->P.hpmax);
 		mdc->TextOut(t*32+32,6*32-16,chp);
-		cc="²»ÄÜ";
+		cc="ä¸èƒ½";
 		mdc->TextOut(t*32+32,9*32-8,cc);
-		cc="Ï°µÃÄ§·¨";
+		cc="ä¹ å¾—é­”æ³•";
 		mdc->TextOut(t*32+32,10*32-8,cc);
-		sprintf(chp,"Á¦Á¿:       %d",q->P.str);
+		sprintf(chp,"åŠ›é‡:       %d",q->P.str);
 		mdc->TextOut((10-t-o)*32+40,6*32,chp);
-		sprintf(chp,"¼¼Êõ:       %d",q->P.dex);
+		sprintf(chp,"æŠ€æœ¯:       %d",q->P.dex);
 		mdc->TextOut((10-t-o)*32+40,7*32,chp);
-		sprintf(chp,"ËÙ¶È:       %d",q->P.speed);
+		sprintf(chp,"é€Ÿåº¦:       %d",q->P.speed);
 		mdc->TextOut((10-t-o)*32+40,8*32,chp);
-		sprintf(chp,"ÔËÆø:       %d",q->P.luck);
+		sprintf(chp,"è¿æ°”:       %d",q->P.luck);
 		mdc->TextOut((10-t-o)*32+40,9*32,chp);
-		sprintf(chp,"·ÀÓù:       %d",q->P.def);
+		sprintf(chp,"é˜²å¾¡:       %d",q->P.def);
 		mdc->TextOut((10-t-o)*32+40,10*32,chp);
-		sprintf(chp,"Ä§·À:       %d",q->P.mdef);
+		sprintf(chp,"é­”é˜²:       %d",q->P.mdef);
 		mdc->TextOut((10-t-o)*32+40,11*32,chp);
-		sprintf(chp,"ÒÆ¶¯:       %d",q->movement);
+		sprintf(chp,"ç§»åŠ¨:       %d",q->movement);
 		mdc->TextOut((10-t-o)*32+40,12*32,chp);
 		sprintf(chp," EXP:       %d",q->P.exp);
 		mdc->TextOut((10-t-o)*32+40,13*32,chp);
@@ -235,7 +235,7 @@ void gamemap::win()
 			mdc->TextOut(7*32-8,7*32-8,cc);
 			dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 			Sleep(1000);
-//Ê¤ÀûµÄ´úÂë
+//èƒœåˆ©çš„ä»£ç 
 }
 void gamemap::loss()
 {
@@ -250,7 +250,7 @@ void gamemap::loss()
 	mdc->TextOut(7*32,7*32-8,cc);
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	Sleep(1000);
-//Ê§°ÜµÄ´úÂë
+//å¤±è´¥çš„ä»£ç 
 }
 
 void gamemap::endheroturn()
@@ -329,7 +329,7 @@ void gamemap::warstart()
 	mdc->BitBlt(123,206,76,32*2,mdc1,0,0,SRCCOPY);
 	mdc1->SelectObject(job[p->job]);
 	mdc->BitBlt(333,206,76,32*2,mdc1,0,0,SRCCOPY);
-//Õ½¶·×´Ì¬on-----------------------------------------------------------
+//æˆ˜æ–—çŠ¶æ€on-----------------------------------------------------------
 	mdc1->SelectObject(blood);
 //HP-----------------------------------------------------------
 	for(i=1;i<=q->P.hpmax;i++)
@@ -352,7 +352,7 @@ void gamemap::warstart()
 			mdc->BitBlt(123+140+8*i,386,8,14,mdc1,0,0,SRCCOPY);
 		else
 			mdc->BitBlt(123+140+8*(i-26),370,8,14,mdc1,0,0,SRCCOPY);
-//ÃüÖÐ-----------------------------------------------------------
+//å‘½ä¸­-----------------------------------------------------------
 	for(i=1;i<=40;i++)
 		mdc->BitBlt(18+58+4*i,386+22,2,8,mdc1,24,0,SRCCOPY);
 	for(i=1;i<=(int)(mattr/2.5);i++)
@@ -361,7 +361,7 @@ void gamemap::warstart()
 		mdc->BitBlt(18+298+4*i,386+22,2,8,mdc1,26,0,SRCCOPY);
 	for(i=1;i<=(int)(hattr/2.5);i++)
 		mdc->BitBlt(18+298+4*i,386+22,4,8,mdc1,0,0,WHITENESS);
-//¹¥»÷Á¦-----------------------------------------------------------
+//æ”»å‡»åŠ›-----------------------------------------------------------
 	for(i=1;i<=40;i++)
 		mdc->BitBlt(18+58+4*i,386+38,2,8,mdc1,24,0,SRCCOPY);
 	for(i=1;i<=((q->P.str<40)?q->P.str:40);i++)
@@ -370,7 +370,7 @@ void gamemap::warstart()
 		mdc->BitBlt(18+298+4*i,386+38,2,8,mdc1,26,0,SRCCOPY);
 	for(i=1;i<=((q->P.str<40)?q->P.str:40);i++)
 		mdc->BitBlt(18+298+4*i,386+38,4,8,mdc1,0,0,WHITENESS);
-//·ÀÓùÁ¦-----------------------------------------------------------
+//é˜²å¾¡åŠ›-----------------------------------------------------------
 	for(i=1;i<=40;i++)
 		mdc->BitBlt(18+58+4*i,386+54,2,8,mdc1,24,0,SRCCOPY);
 	for(i=1;i<=((q->P.def<40)?q->P.def:40);i++)
@@ -379,7 +379,7 @@ void gamemap::warstart()
 		mdc->BitBlt(18+298+4*i,386+54,2,8,mdc1,26,0,SRCCOPY);
 	for(i=1;i<=((q->P.def<40)?q->P.def:40);i++)
 		mdc->BitBlt(18+298+4*i,386+54,4,8,mdc1,0,0,WHITENESS);
-//ÊôÐÔ-----------------------------------------------------------
+//å±žæ€§-----------------------------------------------------------
 	SetBkMode(*mdc,TRANSPARENT);	
 	SetTextColor(*mdc,RGB(255,255,255));
 	char chp[20];CString cc;
@@ -393,7 +393,7 @@ void gamemap::warstart()
 	mdc->TextOut(40+240,330,JOB(p->job));
 	sprintf(chp,"LV%d",p->P.level);
 	mdc->TextOut(180+240,300,chp);
-//Õ½¶·×´Ì¬off-----------------------------------------------------------
+//æˆ˜æ–—çŠ¶æ€off-----------------------------------------------------------
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	Sleep(500);
 }
@@ -402,14 +402,14 @@ void gamemap::warhero()
 	CClientDC dc(hwnd);
 	mdc->SetBkMode(TRANSPARENT);
 	mdc->SetTextColor(RGB(255,255,255));
-//¹¥»÷µÄÑ­»·on-----------------------------------------------------------
+//æ”»å‡»çš„å¾ªçŽ¯on-----------------------------------------------------------
 	mdc1->SelectObject(warmessage);
 	mdc->BitBlt(32,300,223*2,30*2,mdc1,0,0,SRCCOPY);
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	Sleep(300);
 
 	char chp[100];
-	sprintf(chp,("%s·¢ÆðÁËÒ»´Î¹¥»÷..."),p->name);
+	sprintf(chp,("%så‘èµ·äº†ä¸€æ¬¡æ”»å‡»..."),p->name);
 	mdc->TextOut(50,305,chp);
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	Sleep(500);
@@ -418,7 +418,7 @@ void gamemap::warhero()
 	{
 		if((int)(p->P.dex*1.5+p->P.luck*1)>=rand()%100)
 		{
-			sprintf(chp,("%s·ßÅ­Ò»»÷...%sËðÊ§ÁË%dHP"),p->name,q->name,3*hdam);
+			sprintf(chp,("%sæ„¤æ€’ä¸€å‡»...%sæŸå¤±äº†%dHP"),p->name,q->name,3*hdam);
 			q->P.hp-=3*hdam;
 			damall+=3*hdam;
 			dc.BitBlt(-10,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
@@ -428,7 +428,7 @@ void gamemap::warhero()
 		}
 		else
 		{
-			sprintf(chp,("ÃüÖÐÁË...%sËðÊ§ÁË%dHP"),q->name,hdam);
+			sprintf(chp,("å‘½ä¸­äº†...%sæŸå¤±äº†%dHP"),q->name,hdam);
 			q->P.hp-=hdam;
 			damall+=hdam;
 			dc.BitBlt(-10,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
@@ -449,12 +449,12 @@ void gamemap::warhero()
 				mdc->BitBlt(18+4+8*(i-26),370,8,14,mdc1,0,0,SRCCOPY);
 	}
 	else
-		sprintf(chp,("%sÇÉÃîµÄ¶å¹ýÁË¹¥»÷"),q->name);
+		sprintf(chp,("%så·§å¦™çš„è·ºè¿‡äº†æ”»å‡»"),q->name);
 	
 	mdc->TextOut(50,330,chp);
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	Sleep(500);
-//¹¥»÷µÄÑ­»·off-----------------------------------------------------------
+//æ”»å‡»çš„å¾ªçŽ¯off-----------------------------------------------------------
 }
 
 void gamemap::warmon()
@@ -463,21 +463,21 @@ void gamemap::warmon()
 	CClientDC dc(hwnd);
 	mdc->SetBkMode(TRANSPARENT);
 	mdc->SetTextColor(RGB(255,255,255));
-//¹¥»÷µÄÑ­»·on-----------------------------------------------------------
+//æ”»å‡»çš„å¾ªçŽ¯on-----------------------------------------------------------
 	mdc1->SelectObject(warmessage);
 	mdc->BitBlt(32,300,223*2,30*2,mdc1,0,0,SRCCOPY);
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	Sleep(300);
 
 	char chp[100];
-	sprintf(chp,("%s·¢ÆðÁË¹¥»÷..."),q->name);
+	sprintf(chp,("%så‘èµ·äº†æ”»å‡»..."),q->name);
 	mdc->TextOut(50,305,chp);
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	Sleep(500);
 
 	if(mattr>rand()%100)
 	{
-		sprintf(chp,("ÃüÖÐÁË...%sËðÊ§ÁË%dHP"),p->name,mdam);
+		sprintf(chp,("å‘½ä¸­äº†...%sæŸå¤±äº†%dHP"),p->name,mdam);
 		p->P.hp-=mdam;
 			dc.BitBlt(10,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 			Sleep(20);
@@ -496,7 +496,7 @@ void gamemap::warmon()
 				mdc->BitBlt(123+140+8*(i-26),370,8,14,mdc1,0,0,SRCCOPY);
 	}
 	else
-		sprintf(chp,("%sÇÉÃîµÄ¶å¹ýÁË¹¥»÷"),p->name);
+		sprintf(chp,("%så·§å¦™çš„è·ºè¿‡äº†æ”»å‡»"),p->name);
 	
 	mdc->TextOut(50,330,chp);
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
@@ -520,7 +520,7 @@ void gamemap::expup()
 	else
 		x=(int)(damall*(q->job+10)/(p->job+10)*(q->P.level+5)/(p->P.level+5))+1;
 	p->P.exp+=x;
-	sprintf(chp,("%s»ñµÃÁË%d¾­ÑéÖµ..."),p->name,x);
+	sprintf(chp,("%sèŽ·å¾—äº†%dç»éªŒå€¼..."),p->name,x);
 	mdc->TextOut(50,320,chp);
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	Sleep(500);
@@ -536,7 +536,7 @@ void gamemap::levelup()
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 	Sleep(300);
 	char chp[20];
-	sprintf(chp,("%sÉý¼¶ÁË..."),p->name);
+	sprintf(chp,("%så‡çº§äº†..."),p->name);
 	p->P.level++;
 	mdc->TextOut(140,300,chp);
 	dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
@@ -545,49 +545,49 @@ void gamemap::levelup()
 	if((p->P.strup>=rand()%100 && lvtag<=2) && p->P.str<40)
 	{
 		p->P.str++;lvtag++;
-		mdc->TextOut(140,300+25*lvtag,"Á¦Á¿Ôö¼Ó1...");
+		mdc->TextOut(140,300+25*lvtag,"åŠ›é‡å¢žåŠ 1...");
 		dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 		Sleep(500);
 	}
 	if((p->P.dexup>=rand()%100 && lvtag<=2) && p->P.dex<40)
 	{
 		p->P.dex++;lvtag++;
-		mdc->TextOut(140,300+25*lvtag,"¼¼ÊõÔö¼Ó1...");
+		mdc->TextOut(140,300+25*lvtag,"æŠ€æœ¯å¢žåŠ 1...");
 		dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 		Sleep(500);
 	}
 	if((p->P.speedup>=rand()%100 && lvtag<=2) && p->P.speed<40)
 	{
 		p->P.speed++;lvtag++;
-		mdc->TextOut(140,300+25*lvtag,"ËÙ¶ÈÔö¼Ó1...");
+		mdc->TextOut(140,300+25*lvtag,"é€Ÿåº¦å¢žåŠ 1...");
 		dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 		Sleep(500);
 	}
 	if((p->P.luckup>=rand()%100 && lvtag<=1) && p->P.luck<40)
 	{
 		p->P.luck++;lvtag++;
-		mdc->TextOut(140,300+25*lvtag,"ÔËÆøÔö¼Ó1...");
+		mdc->TextOut(140,300+25*lvtag,"è¿æ°”å¢žåŠ 1...");
 		dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 		Sleep(500);
 	}
 	if((p->P.defup>=rand()%100 && lvtag<=2) && p->P.def<40)
 	{
 		p->P.def++;lvtag++;
-		mdc->TextOut(140,300+25*lvtag,"·ÀÓùÔö¼Ó1...");
+		mdc->TextOut(140,300+25*lvtag,"é˜²å¾¡å¢žåŠ 1...");
 		dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 		Sleep(500);
 	}
 	if((p->P.mdefup>=rand()%100 && lvtag<=0)&& p->P.mdef<=20)
 	{
 		p->P.mdef++;lvtag++;
-		mdc->TextOut(140,300+25*lvtag,"Ä§·ÀÔö¼Ó1...");
+		mdc->TextOut(140,300+25*lvtag,"é­”é˜²å¢žåŠ 1...");
 		dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 		Sleep(500);
 	}
 	if(((p->P.hpup>=rand()%100 && lvtag<=3)||lvtag==0)&& p->P.hpmax<52)
 	{
 		p->P.hpmax++;lvtag++;
-		mdc->TextOut(140,300+25*lvtag,"HPÔö¼Ó1...");
+		mdc->TextOut(140,300+25*lvtag,"HPå¢žåŠ 1...");
 		dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 		Sleep(500);
 	}
@@ -601,7 +601,7 @@ void gamemap::exchange()
 			mdc->BitBlt(5*32,6*32,WIDTH,HEIGHT,mdc1,0,0,SRCCOPY);
 			SetBkMode(*mdc,TRANSPARENT);	
 			SetTextColor(*mdc,RGB(255,255,255));
-			CString cc="ÎïÆ·½»»»³É¹¦";
+			CString cc="ç‰©å“äº¤æ¢æˆåŠŸ";
 			mdc->TextOut(6*32-4,7*32-8,cc);
 			dc.BitBlt(0,0,WIDTH,HEIGHT,mdc,0,0,SRCCOPY);
 			Sleep(500);
@@ -610,7 +610,7 @@ void gamemap::exchange()
 void gamemap::war()
 {
 				damall=0;
-				//ÄÄ·½¹¥»÷2´Î
+				//å“ªæ–¹æ”»å‡»2æ¬¡
 				if(p->P.speed>q->P.speed)
 				{hatt=2;matt=1;}
 				else if(p->P.speed==q->P.speed)
@@ -618,7 +618,7 @@ void gamemap::war()
 				else
 				{hatt=1;matt=2;}
 				
-				//ÃüÖÐÂÊ
+				//å‘½ä¸­çŽ‡
 				hattr=(int)((85+(p->P.dex-q->P.dex)*0.5)*(100-ground[q->y][q->x])/100)-q->P.luck;
 				if(hattr>100)hattr=100;
 				else if(hattr<=0)hattr=0;
@@ -626,7 +626,7 @@ void gamemap::war()
 				if(mattr>100)mattr=100;
 				else if(mattr<=0)mattr=0;
 
-				//ÉËº¦
+				//ä¼¤å®³
 				hdam=p->P.str-q->P.def;
 				if(hdam<=0)hdam=1;
 				mdam=q->P.str-p->P.def;
